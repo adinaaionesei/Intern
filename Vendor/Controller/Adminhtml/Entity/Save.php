@@ -30,6 +30,7 @@ class Save extends Action
         $resultRedirect = $this->resultRedirectFactory->create();
         try {
             $vendor = $this->getRequest()->getParam('vendor');
+            $settings = $this->getRequest()->getParam('settings');
             if(is_array($vendor)) {
                 $vendorModel = $this->vendorFactory->create();
                 $vendorModel
@@ -37,6 +38,9 @@ class Save extends Action
                     ->setEmail($vendor['email'])
                     ->setTelephone($vendor['telephone'])
                     ->setStatus($vendor['status'])
+                    ->setCurrency($settings['currency'])
+                    ->setNotifyOrders($settings['notify_orders'])
+                    ->setCcEmails($settings['cc_emails'])
                     ->save();
             }
         } catch (\Exception $e) {

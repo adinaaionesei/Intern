@@ -10,7 +10,7 @@ use Magento\Framework\UrlInterface;
 class Action extends Column
 {
     /** Url path */
-    const ROW_EDIT_URL = 'vendors/menu/edit';
+    const ROW_EDIT_URL = 'vendors/entity/edit';
 
     /** @var UrlInterface */
     protected UrlInterface $_urlBuilder;
@@ -49,7 +49,7 @@ class Action extends Column
                     $item[$name]['edit'] = [
                         'href' => $this->_urlBuilder->getUrl(
                             self::ROW_EDIT_URL,
-                            ['id' => $item['vendor_id']]
+                            ['vendor_id' => $item['vendor_id']]
                         ),
                         'label' => __('Edit'),
                     ];

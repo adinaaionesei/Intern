@@ -18,4 +18,21 @@ interface VendorInterface
     public function getEmail();
 
     public function setEmail($email);
+
+    public function getTelephone();
+
+    public function setTelephone($telephone);
+
+    public function getCurrency();
+
+    public function setCurrency($currency);
+
+    public function getNotifyOrders();
+
+    public function setNotifyOrders($notifyOrders);
+
+    public function getCcEmails();
+
+    public function setCcEmails($ccEmails);
+
 }

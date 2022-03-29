@@ -35,7 +35,7 @@ class InstallSchema implements InstallSchemaInterface
                     Table::TYPE_TEXT,
                     255,
                     ['nullable => false'],
-                    'Post Name'
+                    'Name'
                 )
                 ->addColumn(
                     'status',

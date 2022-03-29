@@ -21,12 +21,12 @@ class Vendor extends AbstractModel implements IdentityInterface, VendorInterface
 
     public function getId()
     {
-        return $this->_getData('id');
+        return $this->_getData('vendor_id');
     }
 
     public function setId($value)
     {
-        return $this->setData('id', $value);
+        return $this->setData('vendor_id', $value);
     }
     public function getName()
     {
@@ -54,5 +54,39 @@ class Vendor extends AbstractModel implements IdentityInterface, VendorInterface
     public function setEmail($value)
     {
         return $this->setData('email', $value);
+    }
+    public function getTelephone()
+    {
+        return $this->_getData('telephone');
+    }
+
+    public function setTelephone($value)
+    {
+        return $this->setData('telephone', $value);
+    }
+    public function getCurrency()
+    {
+        return $this->_getData('$currency');
+    }
+
+    public function setCurrency($currency)
+    {
+        return $this->setData('currency', $currency);
+    }
+    public function getNotifyOrders()
+    {
+        return $this->_getData('$notify_orders');
+    }
+    public function setNotifyOrders($notifyOrders)
+    {
+        return $this->setData('notify_orders', $notifyOrders);
+    }
+    public function getCcEmails()
+    {
+        return $this->_getData('$cc_emails');
+    }
+    public function setCcEmails($ccEmails)
+    {
+        return $this->setData('cc_emails', $ccEmails);
     }
 }
