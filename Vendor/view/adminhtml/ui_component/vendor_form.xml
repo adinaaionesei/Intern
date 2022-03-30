@@ -194,12 +194,12 @@
         <settings>
             <label translate="true">Vendor Addresses</label>
         </settings>
-        <fieldset name="billing_addresses">
+        <fieldset name="billing_address">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="collapsible" xsi:type="boolean">true</item>
                     <item name="opened" xsi:type="boolean">true</item>
-                    <item name="label" xsi:type="string" translate="true">Billing Addresses</item>
+                    <item name="label" xsi:type="string" translate="true">Billing Address</item>
                     <item name="sortOrder" xsi:type="number">40</item>
                     <item name="tab" xsi:type="string">billing_addresses</item>
                 </item>
@@ -281,14 +281,14 @@
                 </argument>
             </field>
         </fieldset>
-        <fieldset name="shipping_addresses">
+        <fieldset name="shipping_address">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="collapsible" xsi:type="boolean">true</item>
                     <item name="opened" xsi:type="boolean">true</item>
-                    <item name="label" xsi:type="string" translate="true">Shipping Addresses</item>
+                    <item name="label" xsi:type="string" translate="true">Shipping Address</item>
                     <item name="sortOrder" xsi:type="number">50</item>
-                    <item name="tab" xsi:type="string">shipping_addresses</item>
+                    <item name="tab" xsi:type="string">shipping_address</item>
                 </item>
             </argument>
             <field formElement="checkbox" name="same_as_billing" sortOrder="50">
@@ -308,27 +308,27 @@
                                 <value>0</value>
                                 <actions>
                                     <action name="0">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_contact_name</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_contact_name</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="1">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_street</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_street</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="2">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_city</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_city</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="3">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_postal_code</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_postal_code</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="4">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_country</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_country</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="5">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_state_region</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_state_region</target>
                                         <callback>enable</callback>
                                     </action>
                                 </actions>
@@ -337,27 +337,27 @@
                                 <value>1</value>
                                 <actions>
                                     <action name="0">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_contact_name</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_contact_name</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="1">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_street</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_street</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="2">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_city</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_city</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="3">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_postal_code</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_postal_code</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="4">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_country</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_country</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="5">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_addresses.shipping_state_region</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_state_region</target>
                                         <callback>disable</callback>
                                     </action>
                                 </actions>

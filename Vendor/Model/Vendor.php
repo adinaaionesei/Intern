@@ -66,7 +66,7 @@ class Vendor extends AbstractModel implements IdentityInterface, VendorInterface
     }
     public function getCurrency()
     {
-        return $this->_getData('$currency');
+        return $this->_getData('currency');
     }
 
     public function setCurrency($currency)
@@ -75,7 +75,7 @@ class Vendor extends AbstractModel implements IdentityInterface, VendorInterface
     }
     public function getNotifyOrders()
     {
-        return $this->_getData('$notify_orders');
+        return $this->_getData('notify_orders');
     }
     public function setNotifyOrders($notifyOrders)
     {
@@ -83,7 +83,7 @@ class Vendor extends AbstractModel implements IdentityInterface, VendorInterface
     }
     public function getCcEmails()
     {
-        return $this->_getData('$cc_emails');
+        return $this->_getData('cc_emails');
     }
     public function setCcEmails($ccEmails)
     {
