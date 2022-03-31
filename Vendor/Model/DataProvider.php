@@ -46,22 +46,32 @@ class DataProvider extends AbstractDataProvider
 
         foreach ($items as $vendor) {
             $this->loadedData[$vendor->getId()]['vendor'] = $vendor->getData();
+            $this->loadedData[$vendor->getId()]['settings'] = [
+                'cc_emails' => $vendor->getCcEmails(),
+                'currency' => $vendor->getCurrency(),
+                'notify_orders' => $vendor->getNotifyOrders()
+            ];
+
+            $addresses = $this->getAddressByVendor($vendor->getId());
+            foreach ($addresses as $address) {
+                if($address->getAddressType() == 'billing') {
+                    $this->loadedData[$vendor->getId()]['addresses']['billing_address'] = $address->getData();
+                    $sameAsBilling = $address->getSameAsBilling();
+                } else {
+                    $this->loadedData[$vendor->getId()]['addresses']['shipping_address'] = $address->getData();
+                    $this->loadedData[$vendor->getId()]['addresses']['shipping_address']['same_as_billing'] = $sameAsBilling;
+                }
+            }
         }
 
         return $this->loadedData;
 
     }
-    public function getBillingAddressByVendor($vendorId)
+
+    public function getAddressByVendor($vendorId)
     {
         return $this->addressCollection->create()
-            ->addFieldToFilter('address_type', 'billing')
             ->addFieldToFilter('vendor_id', $vendorId);
     }
 
-    public function getShippingAddressByVendor($vendorId)
-    {
-        return $this->addressCollection->create()
-            ->addFieldToFilter('address_type', 'shipping')
-            ->addFieldToFilter('vendor_id', $vendorId);
-    }
 }

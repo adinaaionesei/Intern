@@ -210,7 +210,7 @@
                             <item name="dataType" xsi:type="string">text</item>
                             <item name="label" xsi:type="string" translate="true">Contact Name</item>
                             <item name="formElement" xsi:type="string">input</item>
-                            <item name="source" xsi:type="string">intern_vendor_entity</item>
+                            <item name="source" xsi:type="string">intern_vendor_address</item>
                             <item name="dataScope" xsi:type="string">contact_name</item>
                         </item>
                     </argument>
@@ -221,7 +221,7 @@
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Street</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">street</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
@@ -235,7 +235,7 @@
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">City</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">city</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
@@ -249,7 +249,7 @@
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Postal Code</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">postal_code</item>
                     </item>
                 </argument>
@@ -261,7 +261,7 @@
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Country</item>
                         <item name="formElement" xsi:type="string">select</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">country</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
@@ -275,7 +275,7 @@
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">State/Region</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">state_region</item>
                     </item>
                 </argument>
@@ -295,12 +295,12 @@
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="default" xsi:type="number">1</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">same_as_billing</item>
                     </item>
                 </argument>
                 <settings>
-                    <dataScope>same_as_billing</dataScope>
+                    <dataType>boolean</dataType>
                     <label translate="true">Same as Billing</label>
                     <switcherConfig>
                         <rules>
@@ -308,27 +308,27 @@
                                 <value>0</value>
                                 <actions>
                                     <action name="0">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_contact_name</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.contact_name</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="1">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_street</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.street</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="2">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_city</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.city</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="3">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_postal_code</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.postal_code</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="4">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_country</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.country</target>
                                         <callback>enable</callback>
                                     </action>
                                     <action name="5">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_state_region</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.state_region</target>
                                         <callback>enable</callback>
                                     </action>
                                 </actions>
@@ -337,27 +337,27 @@
                                 <value>1</value>
                                 <actions>
                                     <action name="0">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_contact_name</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.contact_name</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="1">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_street</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.street</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="2">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_city</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.city</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="3">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_postal_code</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.postal_code</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="4">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_country</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.country</target>
                                         <callback>disable</callback>
                                     </action>
                                     <action name="5">
-                                        <target>vendor_form.areas.addresses.addresses.shipping_address.shipping_state_region</target>
+                                        <target>vendor_form.areas.addresses.addresses.shipping_address.state_region</target>
                                         <callback>disable</callback>
                                     </action>
                                 </actions>
@@ -378,79 +378,79 @@
                     </checkbox>
                 </formElements>
             </field>
-            <field name="shipping_contact_name">
+            <field name="contact_name">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Contact Name</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_contact_name</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">contact_name</item>
                     </item>
                 </argument>
             </field>
-            <field name="shipping_street">
+            <field name="street">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Street</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_street</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">street</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
             </field>
-            <field name="shipping_city">
+            <field name="city">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">City</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_city</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">city</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
             </field>
-            <field name="shipping_postal_code">
+            <field name="postal_code">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Postal Code</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_postal_code</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">postal_code</item>
                     </item>
                 </argument>
             </field>
-            <field name="shipping_country">
+            <field name="country">
                 <argument name="data" xsi:type="array">
                     <item name="options" xsi:type="object">Magento\Directory\Model\Config\Source\Country</item>
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">Country</item>
                         <item name="formElement" xsi:type="string">select</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_country</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">country</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
             </field>
-            <field name="shipping_state_region">
+            <field name="state_region">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="dataType" xsi:type="string">text</item>
                         <item name="label" xsi:type="string" translate="true">State/Region</item>
                         <item name="formElement" xsi:type="string">input</item>
-                        <item name="source" xsi:type="string">intern_vendor_entity</item>
-                        <item name="dataScope" xsi:type="string">shipping_state_region</item>
+                        <item name="source" xsi:type="string">intern_vendor_address</item>
+                        <item name="dataScope" xsi:type="string">state_region</item>
                     </item>
                 </argument>
             </field>

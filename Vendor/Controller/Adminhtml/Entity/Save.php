@@ -77,18 +77,18 @@ class Save extends Action
                     $billingAddress->setSameAsBilling(1);
                 } else {
                     $shippingAddress = $this->addressFactory->create();
-                    if(isset($shipping['shipping_address_id'])) {
-                        $shippingAddress->load($shipping['shipping_address_id']);
+                    if(isset($shipping['address_id'])) {
+                        $shippingAddress->load($shipping['address_id']);
                     }
                     $shippingAddress
-                        ->setContactName($shipping['shipping_contact_name'])
+                        ->setContactName($shipping['contact_name'])
                         ->setAddressType('shipping')
                         ->setVendorId($vendorModel->getId())
-                        ->setStreet($shipping['shipping_street'])
-                        ->setCity($shipping['shipping_city'])
-                        ->setPostalCode($shipping['shipping_postal_code'])
-                        ->setCountry($shipping['shipping_country'])
-                        ->setStateRegion($shipping['shipping_state_region'])
+                        ->setStreet($shipping['street'])
+                        ->setCity($shipping['city'])
+                        ->setPostalCode($shipping['postal_code'])
+                        ->setCountry($shipping['country'])
+                        ->setStateRegion($shipping['state_region'])
                         ->save();
                 }
                 $billingAddress->save();
