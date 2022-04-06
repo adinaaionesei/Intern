@@ -24,6 +24,7 @@ class Options extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
     public function getAllOptions()
     {
         $vendorCollection = $this->vendorCollectionFactory->create();
+        $this->_options[] = ['label' => '-- Please select --', 'value' => ''];
         foreach($vendorCollection as $vendor)
         {
             $this->_options[] = ['label' => $vendor->getName(), 'value' => $vendor->getId()];

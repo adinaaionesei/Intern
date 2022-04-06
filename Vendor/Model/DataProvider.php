@@ -43,7 +43,6 @@ class DataProvider extends AbstractDataProvider
         $items = $this->collection->getItems();
         $this->loadedData = array();
 
-
         foreach ($items as $vendor) {
             $this->loadedData[$vendor->getId()]['vendor'] = $vendor->getData();
             $this->loadedData[$vendor->getId()]['settings'] = [
@@ -63,15 +62,13 @@ class DataProvider extends AbstractDataProvider
                 }
             }
         }
-
         return $this->loadedData;
-
     }
 
     public function getAddressByVendor($vendorId)
     {
         return $this->addressCollection->create()
-            ->addFieldToFilter('vendor_id', $vendorId);
+            ->addFieldToFilter('vendor_id', $vendorId)
+            ->setOrder('address_type', 'asc');
     }
-
 }
