@@ -99,6 +99,7 @@
                     <item name="dataScope" xsi:type="string">name</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -113,6 +114,7 @@
                     <item name="dataScope" xsi:type="string">email</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-email" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -127,6 +129,7 @@
                     <item name="dataScope" xsi:type="string">telephone</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-phoneLax" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -186,6 +189,9 @@
                     <item name="source" xsi:type="string">intern_vendor_entity</item>
                     <item name="dataScope" xsi:type="string">cc_emails</item>
                     <item name="notice" xsi:type="string">Use comma to separate emails</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-email" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -212,6 +218,9 @@
                             <item name="formElement" xsi:type="string">input</item>
                             <item name="source" xsi:type="string">intern_vendor_address</item>
                             <item name="dataScope" xsi:type="string">contact_name</item>
+                            <item name="validation" xsi:type="array">
+                                <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
+                            </item>
                         </item>
                     </argument>
                 </field>
@@ -239,6 +248,7 @@
                         <item name="dataScope" xsi:type="string">city</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
@@ -251,6 +261,9 @@
                         <item name="formElement" xsi:type="string">input</item>
                         <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">postal_code</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="validate-integer" xsi:type="boolean">true</item>
+                        </item>
                     </item>
                 </argument>
             </field>
@@ -265,6 +278,7 @@
                         <item name="dataScope" xsi:type="string">country</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
@@ -277,6 +291,9 @@
                         <item name="formElement" xsi:type="string">input</item>
                         <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">state_region</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
+                        </item>
                     </item>
                 </argument>
             </field>
@@ -386,6 +403,9 @@
                         <item name="formElement" xsi:type="string">input</item>
                         <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">contact_name</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
+                        </item>
                     </item>
                 </argument>
             </field>
@@ -413,6 +433,7 @@
                         <item name="dataScope" xsi:type="string">city</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
                         </item>
                     </item>
                 </argument>
@@ -425,6 +446,9 @@
                         <item name="formElement" xsi:type="string">input</item>
                         <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">postal_code</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="validate-integer" xsi:type="boolean">true</item>
+                        </item>
                     </item>
                 </argument>
             </field>
@@ -451,6 +475,9 @@
                         <item name="formElement" xsi:type="string">input</item>
                         <item name="source" xsi:type="string">intern_vendor_address</item>
                         <item name="dataScope" xsi:type="string">state_region</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="letters-with-basic-punc" xsi:type="boolean">true</item>
+                        </item>
                     </item>
                 </argument>
             </field>
